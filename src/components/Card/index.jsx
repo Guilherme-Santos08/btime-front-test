@@ -5,12 +5,12 @@ import medalhaDePrata from "../../assets/medalha-de-prata.svg";
 import medalhaDeBronze from "../../assets/medalha-de-bronze.svg";
 
 import { Container } from "./styles";
-import { useEffect } from "react";
 
 export function Card({ teste }) {
   const whyCountry = medalistsApi.filter(
     (medalist) => medalist.country === `${teste}`
   );
+  // https://pt.stackoverflow.com/questions/484146/como-contar-ocorr%c3%aancias-de-um-valor-dentro-de-um-array
   const howManyGold = whyCountry.filter((x) => x.medal === "Gold").length;
   const howManySilver = whyCountry.filter((x) => x.medal === "Silver").length;
   const howManyBronze = whyCountry.filter((x) => x.medal === "Bronze").length;
