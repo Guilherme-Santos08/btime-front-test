@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div `
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -11,7 +11,8 @@ export const Container = styled.div `
   height: 260px;
 
   border-radius: 8px;
-  border: 1px solid red;
+  background-color: #d1d1e9;
+  border: 3px solid #2b2c34;
 
   position: relative !important;
 
@@ -25,7 +26,7 @@ export const Container = styled.div `
   }
 
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     text-align: center;
     margin-top: 30px;
   }
@@ -55,12 +56,19 @@ export const Container = styled.div `
     text-align: center;
   }
   a {
-    font-size: 0.8rem;
-   
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: #2b2c34;
+    transition: color .2s ease-in-out;
+
+    &:hover {
+      color: #6246ea;
+      text-decoration: underline;
+    }
   }
 
   img {
     width: 50px;
     height: 50px;
   }
-`
+`;

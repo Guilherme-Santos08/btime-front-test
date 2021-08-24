@@ -1,8 +1,8 @@
 import { medalistsApi } from "../../api/medalists";
 
-import { H1 } from "./styles";
+import { Container } from "./styles.js";
 
-export function TextMain() {
+export function Countries() {
   const CountriesParticipate = new Map();
   medalistsApi.forEach((teste) => {
     if (!CountriesParticipate.has(teste.country)) {
@@ -11,11 +11,16 @@ export function TextMain() {
   });
   const howManyCountriesParticipate = [...CountriesParticipate.keys()];
 
-
   return (
-      <H1>
-        Temos {howManyCountriesParticipate.length} países nessa lista
-      </H1>
+    <>
+      <Container>
+        <h3>Abreviações dos países</h3>
+        <div>
+          {howManyCountriesParticipate.map((e) => (
+            <span>{e}</span>
+          ))}
+        </div>
+      </Container>
+    </>
   );
 }
-

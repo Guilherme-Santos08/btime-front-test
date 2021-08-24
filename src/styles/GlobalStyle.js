@@ -10,9 +10,10 @@ export default createGlobalStyle`
     scroll-behavior: smooth;
   }
   body {
-    color: black;
+    color: #2b2c34;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
     padding: 16px;
+    background-color: #fffffe;
   }
 `;

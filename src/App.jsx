@@ -4,6 +4,7 @@ import { Input } from "./components/Input";
 import { TextMain } from "./components/TextMain";
 import { Main } from "./components/Main";
 import { Card } from "./components/Card";
+import { Countries } from "./components/Countries";
 
 function App() {
   const [country, setCountry] = useState("");
@@ -16,6 +17,7 @@ function App() {
       <Input value={country} handleOnChangeCountry={handleOnChangeCountry} />
       <TextMain />
       <Main>{country ? <Card teste={country} /> : ""}</Main>
+      <Countries />
     </>
   );
 }
