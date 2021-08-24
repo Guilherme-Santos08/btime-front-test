@@ -7,13 +7,6 @@ import { Main } from "./components/Main";
 
 function App() {
   const [country, setCountry] = useState("");
-  /*
-  const whyCountry = medalistsApi.filter(
-    (medalist) => medalist.country === `${country}`
-  );
-  console.log(whyCountry);
-  */
-
   // Não repetir o nome do pais
   /*
   const CountriesParticipate = new Map();

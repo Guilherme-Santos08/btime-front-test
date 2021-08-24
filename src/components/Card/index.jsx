@@ -5,35 +5,36 @@ import medalhaDePrata from "../../assets/medalha-de-prata.svg";
 import medalhaDeBronze from "../../assets/medalha-de-bronze.svg";
 
 import { Container } from "./styles";
+import { useEffect } from "react";
 
 export function Card({ teste }) {
   const whyCountry = medalistsApi.filter(
     (medalist) => medalist.country === `${teste}`
   );
-  console.log(whyCountry);
+  const howManyGold = whyCountry.filter((x) => x.medal === "Gold").length;
+  const howManySilver = whyCountry.filter((x) => x.medal === "Silver").length;
+  const howManyBronze = whyCountry.filter((x) => x.medal === "Bronze").length;
 
   return (
     <Container>
-      <span>{whyCountry.map((e) => e.country)}</span>
+      <span>{whyCountry.slice(0, 1).map((e) => e.country)}</span>
 
       <h2>Medalhas ganha:</h2>
       <div className="medals">
-        
         <div className="medals__gold medals__amount">
           <img src={medalhaDeOuro} alt="" />
-          <span>{whyCountry.map(e => e.medal)}</span>
+          <span>{howManyGold}</span>
         </div>
 
         <div className="medals__silver medals__amount">
           <img src={medalhaDePrata} alt="" />
-          <span>{0}</span>
+          <span>{howManySilver}</span>
         </div>
 
         <div className="medals__bronze medals__amount">
           <img src={medalhaDeBronze} alt="" />
-          <span>{0}</span>
+          <span>{howManyBronze}</span>
         </div>
-
       </div>
       <div className="medalists">
         <a href="#">Clique para ver os medalhistas</a>
