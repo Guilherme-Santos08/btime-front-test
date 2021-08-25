@@ -7,13 +7,12 @@ export const Container = styled.div `
 
   input {
     font-size: 0.9rem;
-    width: 300px;
-    height: 40px;
-    padding: 10px 8px;
+    width: 18.75rem;
+    height: 2.5rem;
+    padding: 0.625rem 0.5rem;
     
     border-radius: 8px;
     border: 2px solid #6246ea;
     outline: none;
   }
-
 `

@@ -6,7 +6,7 @@ export const Container = styled.main `
   justify-content: center;
   align-items: center;
 
-  gap: 10px;
-  margin-top: 30px;
+  gap: 0.625rem;
+  margin-top: 1.875rem;
 
 `

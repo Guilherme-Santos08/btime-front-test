@@ -3,16 +3,18 @@ import styled from "styled-components";
 export const Container = styled.div`
   position: fixed;
   top: 16px;
-  right: 2rem;
+  right: 1rem;
 
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   flex-direction: column;
 
   h3 {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    max-width: 72px;
+    margin-bottom: 0.625rem;
   }
 
 
@@ -21,15 +23,16 @@ export const Container = styled.div`
     flex-direction: column;
 
     overflow-y: auto;
-    width: 70px;
+    width: 4.375rem;
     height: 90vh;
 
     ::-webkit-scrollbar {
-      width: 12px;
+      width: 8px;
     }
 
     ::-webkit-scrollbar-track {
       background: #2b2c34;
+      border-radius: 8px;
     }
 
     ::-webkit-scrollbar-thumb {
@@ -43,7 +46,7 @@ export const Container = styled.div`
       justify-content: center;
 
       text-align: center;
-      padding: 10px;
+      padding: 0.625rem;
       margin-right: 8px;
 
       border-radius: 4px;
@@ -58,7 +61,7 @@ export const Container = styled.div`
       }
     }
     span + span {
-      margin-top: 10px;
+      margin-top: 0.625rem;
     }
   }
 `;

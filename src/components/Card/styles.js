@@ -6,9 +6,9 @@ export const Container = styled.div`
   justify-content: space-between;
   padding: 10px;
 
-  max-width: 230px;
+  max-width: 14.375rem;
   width: 100%;
-  height: 260px;
+  height: 16.25rem;
 
   border-radius: 8px;
   background-color: #d1d1e9;
@@ -22,13 +22,13 @@ export const Container = styled.div`
     position: absolute;
     top: 0.4rem;
     right: 0.4rem;
-    z-index: 999;
+    z-index: 0;
   }
 
   h2 {
     font-size: 1.4rem;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 1.875rem;
   }
 
   .medals {
@@ -37,7 +37,7 @@ export const Container = styled.div`
     /* margin-top: 30px; */
 
     & div + div {
-      margin-left: 10px;
+      margin-left: 0.625rem;
     }
 
     .medals__amount {
@@ -47,7 +47,7 @@ export const Container = styled.div`
 
       span {
         font-size: 1rem;
-        margin-top: 4px;
+        margin-top: 0.25rem;
         font-weight: 500;
       }
     }
@@ -55,11 +55,12 @@ export const Container = styled.div`
   .medalists {
     text-align: center;
   }
-  a {
+  span {
     font-size: 0.85rem;
     text-decoration: none;
     color: #2b2c34;
-    transition: color .2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
 
     &:hover {
       color: #6246ea;
@@ -68,7 +69,98 @@ export const Container = styled.div`
   }
 
   img {
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+`;
+
+export const Medalist = styled.div`
+  position: absolute;
+  z-index: 9;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  transition: background 0.2s ease-in;
+
+  &.backgroundOpacity {
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: visible;
+  }
+`;
+
+export const MedalistContainer = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  min-width: 18rem;
+  height: 18.75rem;
+  padding: 1.25rem;
+  background-color: #fff;
+
+  transform: translate(-50%, -50%);
+  border: 2px solid #6246ea;
+  border-radius: 8px;
+  overflow-y: auto;
+
+  opacity: 0;
+  z-index: -999;
+  transition: opacity 0.2s ease-in-out;
+
+  &.showMedalists {
+    opacity: 1;
+    z-index: 0;
+  }
+
+  & > span {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff0000;
+
+    cursor: pointer;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .medalists {
+    position: relative;
+  }
+  .medalists__name {
+    margin-top: 1.875rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    span + span {
+      margin-top: 10px;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #2b2c34;
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #6246ea;
+    border-radius: 20px;
   }
 `;

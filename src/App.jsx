@@ -1,4 +1,5 @@
 import { useState } from "react";
+// import { Router, Route, Switch } from "react-router-dom";
 
 import { Input } from "./components/Input";
 import { TextMain } from "./components/TextMain";
@@ -9,7 +10,7 @@ import { Countries } from "./components/Countries";
 function App() {
   const [country, setCountry] = useState("");
   const handleOnChangeCountry = (e) => {
-    setCountry(e.target.value);
+    setCountry(e.target.value.toUpperCase());
   };
 
   return (
