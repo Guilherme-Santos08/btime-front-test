@@ -57,7 +57,7 @@ export function Card({ teste }) {
           <div className="medalists">
             <div className="medalists__name">
               {whyCountry.map((e) => (
-                <span key={e.athlete}>{e.athlete}</span>
+                <span>{e.athlete}</span>
               ))}
             </div>
           </div>
